@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../../shared/theme.dart';
+import '../../shared/theme.dart';
 
 class GetStartedPage extends StatelessWidget {
   const GetStartedPage({Key? key}) : super(key: key);
@@ -44,8 +44,30 @@ class GetStartedPage extends StatelessWidget {
                   textAlign: TextAlign.center,
                 ),
                 Container(
-                  margin: const EdgeInsets.only(bottom: 75),
-                )
+                    width: 220,
+                    height: 55,
+                    margin: const EdgeInsets.only(
+                      top: 50,
+                      bottom: 35,
+                    ),
+                    child: TextButton(
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/sign-up');
+                      },
+                      style: TextButton.styleFrom(
+                        backgroundColor: kPrimaryColor,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(defaultRadius),
+                        ),
+                      ),
+                      child: Text(
+                        'Get Started',
+                        style: whiteTextStyle.copyWith(
+                          fontSize: 16,
+                          fontWeight: medium,
+                        ),
+                      ),
+                    ))
               ],
             ),
           ),
