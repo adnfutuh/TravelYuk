@@ -28,6 +28,7 @@ class SignUpPage extends StatelessWidget {
             const Text('Full Name'),
             const SizedBox(height: 6),
             TextFormField(
+              cursorColor: kBlackColor,
               decoration: const InputDecoration(
                 hintText: 'Enter your full name',
               ),
