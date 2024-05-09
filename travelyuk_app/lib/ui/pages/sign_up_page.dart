@@ -20,14 +20,30 @@ class SignUpPage extends StatelessWidget {
     }
 
     Widget inputSection() {
+      Widget emailInput() {
+        return Container(
+          margin: const EdgeInsets.only(bottom: 20),
+          child:
+              Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+            const Text('Full Name'),
+            const SizedBox(height: 6),
+            TextFormField(
+              decoration: const InputDecoration(
+                hintText: 'Enter your full name',
+              ),
+            )
+          ]),
+        );
+      }
+
       return Container(
-        margin: const EdgeInsets.only(top: 30),
-        padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 20),
-        decoration: BoxDecoration(
-          color: kWhiteColor,
-          borderRadius: BorderRadius.circular(defaultRadius),
-        ),
-      );
+          margin: const EdgeInsets.only(top: 30),
+          padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 20),
+          decoration: BoxDecoration(
+            color: kWhiteColor,
+            borderRadius: BorderRadius.circular(defaultRadius),
+          ),
+          child: Column(children: [emailInput()]));
     }
 
     return Scaffold(
