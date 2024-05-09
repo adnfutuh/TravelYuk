@@ -19,6 +19,17 @@ class SignUpPage extends StatelessWidget {
       );
     }
 
+    Widget inputSection() {
+      return Container(
+        margin: const EdgeInsets.only(top: 30),
+        padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 20),
+        decoration: BoxDecoration(
+          color: kWhiteColor,
+          borderRadius: BorderRadius.circular(defaultRadius),
+        ),
+      );
+    }
+
     return Scaffold(
       backgroundColor: kBackgroundColor,
       body: SafeArea(
