@@ -37,6 +37,59 @@ class SignUpPage extends StatelessWidget {
         );
       }
 
+      Widget nameInput() {
+        return Container(
+          margin: const EdgeInsets.only(bottom: 20),
+          child:
+              Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+            const Text('Email Address'),
+            const SizedBox(height: 6),
+            TextFormField(
+              cursorColor: kBlackColor,
+              decoration: const InputDecoration(
+                hintText: 'testtravel@gmail.com',
+              ),
+            )
+          ]),
+        );
+      }
+
+      Widget passwordInput() {
+        return Container(
+          margin: const EdgeInsets.only(bottom: 20),
+          child:
+              Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+            const Text('Password'),
+            const SizedBox(height: 6),
+            TextFormField(
+              cursorColor: kBlackColor,
+              obscureText: true,
+              decoration: const InputDecoration(
+                hintText: 'Enter your password',
+              ),
+            )
+          ]),
+        );
+      }
+
+      Widget hobbyInput() {
+        return Container(
+          margin: const EdgeInsets.only(bottom: 30),
+          child:
+              Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+            const Text('Hobby'),
+            const SizedBox(height: 6),
+            TextFormField(
+              cursorColor: kBlackColor,
+              obscureText: true,
+              decoration: const InputDecoration(
+                hintText: 'Your hobby',
+              ),
+            )
+          ]),
+        );
+      }
+
       return Container(
           margin: const EdgeInsets.only(top: 30),
           padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 20),
@@ -44,7 +97,12 @@ class SignUpPage extends StatelessWidget {
             color: kWhiteColor,
             borderRadius: BorderRadius.circular(defaultRadius),
           ),
-          child: Column(children: [emailInput()]));
+          child: Column(children: [
+            nameInput(),
+            emailInput(),
+            passwordInput(),
+            hobbyInput()
+          ]));
     }
 
     return Scaffold(
