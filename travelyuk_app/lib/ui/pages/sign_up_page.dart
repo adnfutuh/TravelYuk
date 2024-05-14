@@ -20,16 +20,20 @@ class SignUpPage extends StatelessWidget {
     }
 
     Widget inputSection() {
-      Widget emailInput() {
+      Widget nameInput() {
         return Container(
           margin: const EdgeInsets.only(bottom: 20),
           child:
               Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-            const Text('Full Name'),
+            Text(
+              'Full Name',
+              style: blackTextStyle.copyWith(fontWeight: semiBold),
+            ),
             const SizedBox(height: 6),
             TextFormField(
               cursorColor: kBlackColor,
-              decoration: const InputDecoration(
+              decoration: InputDecoration(
+                hintStyle: greyTextStyle,
                 hintText: 'Enter your full name',
               ),
             )
@@ -37,16 +41,18 @@ class SignUpPage extends StatelessWidget {
         );
       }
 
-      Widget nameInput() {
+      Widget emailInput() {
         return Container(
           margin: const EdgeInsets.only(bottom: 20),
           child:
               Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-            const Text('Email Address'),
+            Text('Email Address',
+                style: blackTextStyle.copyWith(fontWeight: semiBold)),
             const SizedBox(height: 6),
             TextFormField(
               cursorColor: kBlackColor,
-              decoration: const InputDecoration(
+              decoration: InputDecoration(
+                hintStyle: greyTextStyle,
                 hintText: 'testtravel@gmail.com',
               ),
             )
@@ -59,12 +65,14 @@ class SignUpPage extends StatelessWidget {
           margin: const EdgeInsets.only(bottom: 20),
           child:
               Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-            const Text('Password'),
+            Text('Password',
+                style: blackTextStyle.copyWith(fontWeight: semiBold)),
             const SizedBox(height: 6),
             TextFormField(
               cursorColor: kBlackColor,
               obscureText: true,
-              decoration: const InputDecoration(
+              decoration: InputDecoration(
+                hintStyle: greyTextStyle,
                 hintText: 'Enter your password',
               ),
             )
@@ -77,12 +85,13 @@ class SignUpPage extends StatelessWidget {
           margin: const EdgeInsets.only(bottom: 30),
           child:
               Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-            const Text('Hobby'),
+            Text('Hobby', style: blackTextStyle.copyWith(fontWeight: semiBold)),
             const SizedBox(height: 6),
             TextFormField(
               cursorColor: kBlackColor,
               obscureText: true,
-              decoration: const InputDecoration(
+              decoration: InputDecoration(
+                hintStyle: greyTextStyle,
                 hintText: 'Your hobby',
               ),
             )
@@ -94,7 +103,7 @@ class SignUpPage extends StatelessWidget {
         return Container(
           width: double.infinity,
           height: 50,
-          margin: EdgeInsets.only(bottom: 30),
+          margin: const EdgeInsets.only(bottom: 30),
           child: TextButton(
             onPressed: () {
               Navigator.pushNamed(context, '/home');
