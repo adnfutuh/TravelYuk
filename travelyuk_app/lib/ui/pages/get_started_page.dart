@@ -23,11 +23,11 @@ class GetStartedPage extends StatelessWidget {
           ),
           Center(
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.end,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
                   'Fly Like a Bird',
-                  style: whiteTextStyle.copyWith(
+                  style: blackTextStyle.copyWith(
                     fontSize: 32,
                     fontWeight: semiBold,
                   ),
@@ -37,7 +37,7 @@ class GetStartedPage extends StatelessWidget {
                 ),
                 Text(
                   'Explore new world with us and let\nyourself get an amazing experiences',
-                  style: whiteTextStyle.copyWith(
+                  style: blackTextStyle.copyWith(
                     fontSize: 16,
                     fontWeight: light,
                   ),
@@ -47,7 +47,7 @@ class GetStartedPage extends StatelessWidget {
                     width: 220,
                     height: 55,
                     margin: const EdgeInsets.only(
-                      top: 50,
+                      top: 80,
                       bottom: 35,
                     ),
                     child: TextButton(
@@ -55,7 +55,7 @@ class GetStartedPage extends StatelessWidget {
                         Navigator.pushNamed(context, '/sign-up');
                       },
                       style: TextButton.styleFrom(
-                        backgroundColor: kPrimaryColor,
+                        backgroundColor: Colors.blueAccent,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(defaultRadius),
                         ),
